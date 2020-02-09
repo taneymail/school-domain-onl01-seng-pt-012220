@@ -6,23 +6,23 @@ class School
       def initialize(name)
         @name = name 
         @roster = {} 
-     end
+      end
 
-     def add_student(name, grade) 
+      def add_student(name, grade) 
           if @roster.has_key?(grade) 
             @roster[grade] << name 
          else
             @roster[grade] = [name] 
          end
-     end
+      end
 
-     def grade(grade)
+       def grade(grade)
          self.roster[grade] 
       end
 
-     def sort()
+      def sort()
           self.roster.each do |grade,students| 
               students.sort! 
       end
-end
+  end
 end
